@@ -1,8 +1,8 @@
 # basic operations on single array
 
-import numpy as np
+import numpy as n
 
-a = np.array([1, 2, 5, 3])
+a = n.array([1, 2, 5, 3])
 print("\n square of a: ",a*a,"\n exponential: ",a**a, "\n double: ",a+a,"\n Give zeros: " ,a-a,"\n Give ones: ", a/a)
 
 # add 1 to every element
@@ -23,28 +23,32 @@ a *= 2
 print ("Doubled each element of original array:", a)
 
 # transpose of array
-a = np.array([[1, 2, 3], [3, 4, 5], [9, 6, 0]])
+a = n.array([[1, 2, 3], [3, 4, 5], [9, 6, 0]])
 
 print ("\nOriginal array:\n", a)
 print ("Transpose of array:\n", a.T)
 
 print(a.flatten()) # gives list
+#OR
+for x in n.nditer(a, flags = ['external_loop']):
+    print(x)
+
 print ("Flat of array:\n", a.flat)
 # gives iterable
 for item in a.flat:
     print(item)
 print("above using flat method and below using nditer function") 
-for i in np.nditer(a):
+for i in n.nditer(a):
     print(i)
 
 
 # binary operators in Numpy
 
 
-b = np.array([[1, 2],
-			  [3, 4]])
-c = np.array([[4, 3],
-			  [2, 1]])
+b = n.array([[1, 2],
+	     [3, 4]])
+c = n.array([[4, 3],
+	     [2, 1]])
 
 # add arrays
 print ("Array sum and sub:\n", b + c, "\n",b-c)
@@ -58,7 +62,7 @@ print ("Matrix multiplication:\n", b.dot(c))
 
 # Broadcasting
 
-a = np.array([1.0, 2.0, 3.0])
+a = n.array([1.0, 2.0, 3.0])
 
 # Example 1
 b = 2.0
