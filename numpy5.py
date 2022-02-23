@@ -27,10 +27,16 @@ a = np.array([[1, 2, 3], [3, 4, 5], [9, 6, 0]])
 
 print ("\nOriginal array:\n", a)
 print ("Transpose of array:\n", a.T)
-print(a.flatten())
-# print ("Flat of array:\n", a.flat)
+
+print(a.flatten()) # gives list
+print ("Flat of array:\n", a.flat)
+# gives iterable
 for item in a.flat:
     print(item)
+print("above using flat method and below using nditer function") 
+for i in np.nditer(a):
+    print(i)
+
 
 # binary operators in Numpy
 
