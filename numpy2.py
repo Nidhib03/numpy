@@ -25,9 +25,26 @@ print ("\nA random array:\n", e, type(e))
 f = np.arange(0, 30, 5)
 print ("\nA sequential array with steps of 5:\n", f)
 
+# the use of index arrays.
+# Create a sequence of integers from 10 to 1 with a step of -2
+g = np.arange(10, 1, -2)
+print("\n A sequential array with a negative step: \n",g)
+
+# Indexes are specified inside the np.array method.
+newarr = g[np.array([3, 1, 2, 4 ])]
+print("\n Elements at these indices are:\n",newarr)
+
 # Create a sequence of 10 values in range 0 to 5
-g = np.linspace(1, 5, 10)
-print ("\nA sequential array with 10 values between 0 and 5:\n", g)
+h = np.linspace(1, 5, 10)
+print ("\nA sequential array with 10 values between 0 and 5:\n", h)
+
+# NumPy array with elements from 1 to 9
+x = np.arange(1,10)
+print(x)
+# Index values can be negative.
+arr = x[np.array([2, 5, -1])]
+print("\n Elements are : \n",arr)
+
 
 # Reshaping 3X4 array to 2X2X3 array
 arr = np.array([[1, 2, 3, 4],
