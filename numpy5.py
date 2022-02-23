@@ -3,6 +3,7 @@
 import numpy as np
 
 a = np.array([1, 2, 5, 3])
+print("\n square of a: ",a*a,"\n exponential: ",a**a, "\n double: ",a+a,"\n Give zeros: " ,a-a,"\n Give ones: ", a/a)
 
 # add 1 to every element
 print ("Adding 1 to every element:", a+1)
