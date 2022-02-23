@@ -34,6 +34,15 @@ print("\n A sequential array with a negative step: \n",g)
 newarr = g[np.array([3, 1, 2, 4 ])]
 print("\n Elements at these indices are:\n",newarr)
 
+
+x = np.arange(1,10)
+print(x)
+# Index values can be negative.
+arr = x[np.array([2, 5, -1])]
+print("\n Elements are : \n",arr)
+
+print("\n x[-6:8:1] = ",x[-7:9:3])
+
 # Create a sequence of 10 values in range 0 to 5
 h = np.linspace(1, 5, 10)
 print ("\nA sequential array with 10 values between 0 and 5:\n", h)
