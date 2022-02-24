@@ -1,13 +1,39 @@
 # universal functions in numpy  (ufunc)
 import numpy as np
 
-# create an array of sine values
-a = np.array([0, np.pi/2, np.pi])
-print ("Sine values of array elements:", np.sin(a))
+# statistical function
 
-# exponential values
-a = np.array([0, 1, 2, 3])
-print ("Exponent of array elements:", np.exp(a))
+# construct a weight array
+weight = np.array([50.7, 52.5, 50, 58, 55.63, 73.25, 49.5, 45])
 
-# square root of array values
-print ("Square root of array elements:", np.sqrt(a))
+# minimum and maximum
+print('Minimum and maximum weight of the students: ')
+print(np.amin(weight), np.amax(weight))
+
+# range of weight i.e. max weight-min weight
+print('Range of the weight of the students: ')
+print(np.ptp(weight))
+
+# percentile
+print('Weight below which 70 % student fall: ')
+print(np.percentile(weight, 70))
+
+# mean
+print('Mean weight of the students: ')
+print(np.mean(weight))
+
+# median
+print('Median weight of the students: ')
+print(np.median(weight))
+
+# standard deviation
+print('Standard deviation of weight of the students: ')
+print(np.std(weight))
+
+# variance
+print('Variance of weight of the students: ')
+print(np.var(weight))
+
+# average
+print('Average weight of the students: ')
+print(np.average(weight))
